@@ -44,19 +44,18 @@ const RandomQuote = () => {
 }
     return (  
         <div className='container'>
-            <div className="quote-container">
-            <div className='quote'>"{quote.text}"</div>
+            <div className="quote-container" id="quote-box">
+            <div className='quote' id="text">"{quote.text}"</div>
                             <div className='line'></div>
-
             <div>
                 <div className="bottom">
-                    <div className="author">-{quote.author}</div>
+                    <div className="author" id="author">-{quote.author}</div>
                 </div>
             </div>
             </div>
             <div className="icons">
-                <img src={quote_icon} onClick={random} alt="new quote button" />
-                <img src={x_icon} onClick={()=>twitter()} alt="x icon" />
+                <img src={quote_icon} onClick={random} alt="new quote button" id="new-quote" />
+                <a href="" id="tweet-quote"><img src={x_icon} onClick={()=>twitter()} alt="x icon" /></a>
             </div>
         </div>
     )
