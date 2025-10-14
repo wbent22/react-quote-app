@@ -44,12 +44,12 @@ const RandomQuote = () => {
 }
     return (  
         <div className='container'>
-            <div className="quote-container" id="quote-box">
-            <div className='quote' id="text">"{quote.text}"</div>
+            <div id="quote-box" className="quote-container" >
+            <div id="text" className='quote' >"{quote.text}"</div>
                             <div className='line'></div>
             <div>
                 <div className="bottom">
-                    <div className="author" id="author">-{quote.author}</div>
+                    <div id="author" >-{quote.author}</div>
                 </div>
             </div>
             </div>
