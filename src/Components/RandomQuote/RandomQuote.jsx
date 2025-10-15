@@ -40,11 +40,11 @@ const RandomQuote = () => {
 
     const twitter = () =>
 {
-    window.open(`https://x.com/compose/post?text=${quote.text} - ${quote.author}`)
+    window.open(`https://twitter.com/intent/tweet?text=${quote.text} - ${quote.author}`)
 }
     return (  
-        <div className='container'>
-            <div id="quote-box" className="quote-container" >
+        <div id="quote-box"  className='container'>
+            <div className="quote-container" >
             <div id="text" className='quote' >"{quote.text}"</div>
                             <div className='line'></div>
             <div>
@@ -54,7 +54,7 @@ const RandomQuote = () => {
             </div>
             </div>
             <div className="icons">
-                <img src={quote_icon} onClick={random} alt="new quote button" id="new-quote" />
+                <button href="" id="new-quote"><img src={quote_icon} onClick={random} alt="new quote button" /></button>
                 <a href="" id="tweet-quote"><img src={x_icon} onClick={()=>twitter()} alt="x icon" /></a>
             </div>
         </div>
