@@ -38,10 +38,6 @@ const RandomQuote = () => {
         });
     };
 
-    const twitter = () =>
-{
-    window.open(`https://twitter.com/intent/tweet?text=${quote.text} - ${quote.author}`)
-}
     return (  
         <div id="quote-box"  className='container'>
             <div className="quote-container" >
@@ -55,7 +51,8 @@ const RandomQuote = () => {
             </div>
             <div className="icons">
                 <button href="" id="new-quote"><img src={quote_icon} onClick={random} alt="new quote button" /></button>
-                <a href="twitter.com/intent/tweet" id="tweet-quote" onClick={()=>twitter()}><img src={x_icon}  alt="x icon" /></a>
+                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                `"${quote.text}" - ${quote.author}`)}`} target="_top" rel="noopener noreferrer" id="tweet-quote" ><img src={x_icon}  alt="x icon" /></a>
             </div>
         </div>
     )
