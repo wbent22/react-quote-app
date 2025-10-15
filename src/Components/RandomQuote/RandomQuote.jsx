@@ -55,7 +55,7 @@ const RandomQuote = () => {
             </div>
             <div className="icons">
                 <button href="" id="new-quote"><img src={quote_icon} onClick={random} alt="new quote button" /></button>
-                <a href="" id="tweet-quote"><img src={x_icon} onClick={()=>twitter()} alt="x icon" /></a>
+                <a href="twitter.com/intent/tweet" id="tweet-quote" onClick={()=>twitter()}><img src={x_icon}  alt="x icon" /></a>
             </div>
         </div>
     )
